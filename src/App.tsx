@@ -47,20 +47,6 @@ export default function App() {
       <main className="grow max-w-[1600px] w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 print:p-0 print:m-0">
         {/* Left Column: Form / JSON Editor Controls */}
         <div className="lg:col-span-5 flex flex-col gap-4 print:hidden h-[calc(100vh-100px)] sticky top-20">
-          {/* WeasyPrint Error Warning Banner */}
-          <div className="bg-amber-500/10 border border-amber-500/20 p-3 rounded-2xl flex items-center justify-between text-xs text-amber-300">
-            <div className="flex items-center gap-2">
-              <AlertCircle className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>Problème <strong>WeasyPrint GTK</strong> résolu en mode Web !</span>
-            </div>
-            <button
-              onClick={() => setIsHelpOpen(true)}
-              className="px-2.5 py-1 bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 rounded-lg font-medium transition shrink-0 ml-2"
-            >
-              Voir explications
-            </button>
-          </div>
-
           {/* Mode Switcher & AI Trigger */}
           <div className="flex items-center justify-between bg-slate-900 border border-slate-800 p-1.5 rounded-2xl">
             <div className="flex items-center gap-1">
