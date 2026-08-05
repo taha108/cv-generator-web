@@ -150,14 +150,6 @@ export const Navbar: React.FC<Props> = ({
 
         {/* Action Buttons */}
         <div className="flex items-center gap-2">
-          {/* WeasyPrint Error Info Button */}
-          <button
-            onClick={onOpenHelp}
-            className="p-2 text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/20 rounded-xl transition"
-            title="Explication erreur WeasyPrint libgobject-2.0-0"
-          >
-            <HelpCircle className="w-4 h-4" />
-          </button>
 
           {/* Hidden File Input */}
           <input
