@@ -1,0 +1,6 @@
+{
+  "name": "CV Generator",
+  "description": "Application de création et génération de CV en PDF",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

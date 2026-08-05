@@ -1,0 +1,14 @@
+# Fichier HTML intermédiaire généré (pas besoin de le versionner)
+cv.html
+# Note : cv.pdf est volontairement gardé dans le repo comme exemple de rendu
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environnement / éditeurs
+.vscode/
+.idea/
+.DS_Store

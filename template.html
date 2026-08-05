@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>{{ nom }} - CV</title>
+<style>
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+        font-family: Helvetica, Arial, sans-serif;
+        color: #1a1a1a;
+        font-size: 12px;
+        height: 100%;
+    }
+    .layout {
+        display: flex;
+        min-height: 100%;
+    }
+    .sidebar {
+        width: 33%;
+        background-color: #12181f;
+        color: #ffffff;
+        padding: 30px 20px;
+    }
+    .main {
+        width: 67%;
+        padding: 30px 30px;
+    }
+    .name { font-size: 24px; font-weight: bold; color: #ffffff; }
+    .titre { color: #5eead4; font-size: 13px; font-weight: bold; margin-top: 4px; margin-bottom: 20px; }
+    .side-h2 {
+        font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+        color: #5eead4; margin-top: 20px; margin-bottom: 8px;
+        border-bottom: 1px solid #2a3441; padding-bottom: 5px;
+    }
+    .contact-line { color: #cbd5e1; font-size: 11px; margin-bottom: 6px; }
+    .skill-tag { color: #5eead4; font-size: 11px; margin-bottom: 4px; }
+    .langue-line { color: #cbd5e1; font-size: 11px; margin-bottom: 5px; }
+    .main-h2 {
+        font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+        color: #0f766e; margin-top: 18px; margin-bottom: 10px;
+        border-bottom: 2px solid #5eead4; padding-bottom: 5px;
+    }
+    .resume { font-size: 12px; line-height: 1.6; color: #333333; }
+    .entry-title { font-size: 13px; font-weight: bold; color: #12181f; }
+    .entry-sub { font-size: 10px; color: #64748b; margin-bottom: 4px; }
+    .entry-desc { font-size: 11px; color: #444444; line-height: 1.5; }
+    .entry-link { color: #0f766e; font-size: 10px; }
+    .entry-spacer { height: 12px; }
+    .entry-block { break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="layout">
+    <div class="sidebar">
+        <div class="name">{{ nom }}</div>
+        <div class="titre">{{ titre }}</div>
+        <div class="side-h2">Contact</div>
+        {% if email %}<div class="contact-line">Email : {{ email }}</div>{% endif %}
+        {% if telephone %}<div class="contact-line">Tel : {{ telephone }}</div>{% endif %}
+        {% if github %}<div class="contact-line">GitHub : {{ github }}</div>{% endif %}
+        {% if linkedin %}<div class="contact-line">LinkedIn : {{ linkedin }}</div>{% endif %}
+        <div class="side-h2">Competences</div>
+        {% for c in competences %}<div class="skill-tag">&bull; {{ c }}</div>{% endfor %}
+        <div class="side-h2">Langues</div>
+        {% for l in langues %}
+        <div class="langue-line">{{ l.langue }} &mdash; {{ l.niveau }}</div>
+        {% endfor %}
+    </div>
+    <div class="main">
+        <div class="main-h2">Profil</div>
+        <div class="resume">{{ resume }}</div>
+        <div class="main-h2">Formation</div>
+        {% for f in formation %}
+        <div class="entry-block">
+            <div class="entry-title">{{ f.diplome }}</div>
+            <div class="entry-sub">{{ f.etablissement }} &mdash; {{ f.periode }}</div>
+            <div class="entry-spacer"></div>
+        </div>
+        {% endfor %}
+        <div class="main-h2">Experiences</div>
+        {% for e in experiences %}
+        <div class="entry-block">
+            <div class="entry-title">{{ e.poste }} &mdash; {{ e.entreprise }}</div>
+            <div class="entry-sub">{{ e.periode }}</div>
+            <div class="entry-desc">{{ e.description }}</div>
+            <div class="entry-spacer"></div>
+        </div>
+        {% endfor %}
+        <div class="main-h2">Projets</div>
+        {% for p in projets %}
+        <div class="entry-block">
+            <div class="entry-title">{{ p.nom }}</div>
+            <div class="entry-desc">{{ p.description }}</div>
+            {% if p.lien %}<div class="entry-link">{{ p.lien }}</div>{% endif %}
+            <div class="entry-spacer"></div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>

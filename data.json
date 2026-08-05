@@ -1,0 +1,49 @@
+{
+  "nom": "Taha El",
+  "titre": "Étudiant en informatique",
+  "email": "tahaelmeliani@gmail.com",
+  "github": "https://github.com/taha108",
+  "linkedin": "",
+  "telephone": "",
+  "resume": "Étudiant passionné par le développement, en apprentissage actif via des projets personnels.",
+  "formation": [
+    {
+      "diplome": "Licence Informatique",
+      "etablissement": "Nom de ta fac",
+      "periode": "2023 - 2026"
+    }
+  ],
+  "experiences": [
+    {
+      "poste": "Caissier",
+      "entreprise": "Lidl",
+      "periode": "2026",
+      "description": "Gestion de caisse, encaissement client, tenue du poste de vente."
+    },
+    {
+      "poste": "Vendeur",
+      "entreprise": "Intersport",
+      "periode": "2023",
+      "description": "Conseil client, mise en rayon, gestion des stocks."
+    }
+  ],
+  "competences": [
+    "Python", "Git & GitHub", "APIs REST", "HTML/CSS"
+  ],
+  "projets": [
+    {
+      "nom": "Telegram Blague Bot",
+      "description": "Bot Telegram qui envoie des blagues aléatoires via l'API Telegram.",
+      "lien": "https://github.com/taha108/telegram-blague-bot"
+    },
+    {
+      "nom": "CV Generator",
+      "description": "Générateur de CV/portfolio automatique en Python à partir d'un fichier JSON.",
+      "lien": "https://github.com/taha108/cv-generator"
+    }
+  ],
+  "langues": [
+    {"langue": "Français", "niveau": "Natif"},
+    {"langue": "Anglais", "niveau": "Courant"}
+  ]
+}
