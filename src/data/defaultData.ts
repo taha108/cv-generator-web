@@ -1,59 +1,67 @@
 import { CVData } from '../types';
 
 export const defaultCVData: CVData = {
-  nom: "Taha El",
-  titre: "Étudiant en informatique",
-  email: "tahaelmeliani@gmail.com",
-  github: "https://github.com/taha108",
-  linkedin: "",
-  telephone: "",
-  resume: "Étudiant passionné par le développement, en apprentissage actif via des projets personnels.",
+  nom: "Alex Martin",
+  titre: "Développeur Full Stack",
+  email: "alex.martin@example.com",
+  github: "https://github.com/example",
+  linkedin: "https://linkedin.com/in/example",
+  telephone: "+33 6 12 34 56 78",
+  resume: "Développeur passionné avec de l'expérience dans la création d'applications web modernes, réactives et performantes.",
   formation: [
     {
       id: "edu-1",
+      diplome: "Master en Informatique",
+      etablissement: "Université de Paris",
+      periode: "2022 - 2024"
+    },
+    {
+      id: "edu-2",
       diplome: "Licence Informatique",
-      etablissement: "Nom de ta fac",
-      periode: "2023 - 2026"
+      etablissement: "Université de Lyon",
+      periode: "2019 - 2022"
     }
   ],
   experiences: [
     {
       id: "exp-1",
-      poste: "Caissier",
-      entreprise: "Lidl",
-      periode: "2026",
-      description: "Gestion de caisse, encaissement client, tenue du poste de vente."
+      poste: "Développeur Front-End React",
+      entreprise: "Tech Solutions",
+      periode: "2023 - Présent",
+      description: "Conception et développement d'interfaces web réactives en React et TypeScript. Optimisation des performances et intégration d'API RESTful."
     },
     {
       id: "exp-2",
-      poste: "Vendeur",
-      entreprise: "Intersport",
-      periode: "2023",
-      description: "Conseil client, mise en rayon, gestion des stocks."
+      poste: "Développeur Web Stagiaire",
+      entreprise: "WebAgency",
+      periode: "2022",
+      description: "Création de sites web, intégration de maquettes Figma et maintenance applicative."
     }
   ],
   competences: [
-    "Python",
+    "TypeScript / JavaScript",
+    "React & Node.js",
+    "Tailwind CSS / HTML5",
     "Git & GitHub",
-    "APIs REST",
-    "HTML/CSS"
+    "APIs RESTful",
+    "Python"
   ],
   projets: [
     {
       id: "proj-1",
-      nom: "Telegram Blague Bot",
-      description: "Bot Telegram qui envoie des blagues aléatoires via l'API Telegram.",
-      lien: "https://github.com/taha108/telegram-blague-bot"
+      nom: "Gestionnaire de Tâches Kanban",
+      description: "Application web d'organisation de projets en temps réel avec glisser-déposer et sauvegarde locale.",
+      lien: "https://github.com/example/kanban-app"
     },
     {
       id: "proj-2",
-      nom: "CV Generator",
-      description: "Générateur de CV/portfolio automatique en Python à partir d'un fichier JSON.",
-      lien: "https://github.com/taha108/cv-generator"
+      nom: "Générateur de CV Web",
+      description: "Application interactive pour créer, personnaliser et exporter des CV au format PDF.",
+      lien: "https://github.com/example/cv-generator"
     }
   ],
   langues: [
     { id: "lang-1", langue: "Français", niveau: "Natif" },
-    { id: "lang-2", langue: "Anglais", niveau: "Courant" }
+    { id: "lang-2", langue: "Anglais", niveau: "Courant (C1)" }
   ]
 };
